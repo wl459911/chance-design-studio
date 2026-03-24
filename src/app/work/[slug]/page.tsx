@@ -1,12 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getCaseBySlug, studioContent, type Locale } from '@/lib/studio-content';
+import { getCaseBySlug, studioContent } from '@/lib/studio-content';
 import styles from '@/app/studio.module.css';
 
 type CasePageProps = {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<{ lang?: string }>;
 };
 
 export async function generateStaticParams() {
@@ -29,14 +28,9 @@ export async function generateMetadata({ params }: CasePageProps): Promise<Metad
   };
 }
 
-function normalizeLocale(raw?: string): Locale {
-  return raw === 'en' ? 'en' : 'zh';
-}
-
-export default async function CaseDetailPage({ params, searchParams }: CasePageProps) {
+export default async function CaseDetailPage({ params }: CasePageProps) {
   const { slug } = await params;
-  const query = await searchParams;
-  const locale = normalizeLocale(query.lang);
+  const locale = 'zh';
   const t = studioContent[locale];
   const caseItem = getCaseBySlug(locale, slug);
 

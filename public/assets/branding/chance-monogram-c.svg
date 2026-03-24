@@ -1,0 +1,7 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F5F8FF"/>
+  <circle cx="600" cy="400" r="210" stroke="#0F2342" stroke-width="44"/>
+  <path d="M745 260C703 226 650 206 593 206C463 206 358 311 358 441C358 571 463 676 593 676C650 676 703 656 745 622" stroke="#FF6B00" stroke-width="32" stroke-linecap="round"/>
+  <rect x="810" y="252" width="30" height="296" rx="15" fill="#0F2342"/>
+  <text x="96" y="716" fill="#1C3155" font-family="Arial, Helvetica, sans-serif" font-size="44" letter-spacing="4">CHANCE DESIGN STUDIO</text>
+</svg>

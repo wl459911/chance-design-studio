@@ -1,7 +1,9 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './home.module.css';
+import { showcaseItems } from '@/lib/showcase-data';
 
 const serviceItems = [
   {
@@ -31,52 +33,14 @@ const serviceItems = [
   },
 ];
 
-const caseItems = [
-  {
-    title: 'Pengi Landing Experience',
-    scope: 'Product Marketing · Pengi',
-    desc: '重构首页价值叙事和 CTA 路径，强化首屏理解和行动转化。',
-    metric: '首屏信息识别效率提升',
-    image: '/assets/pengi-home-full.png',
-    link: 'https://pengi.ai',
-    linkLabel: '查看原站页面',
-    featured: true,
-  },
-  {
-    title: '斑马 AI 课 App 改版',
-    scope: 'Mobile App · UIUX Job',
-    desc: '优化课程信息层级与学习路径展示，增强任务查找和阅读效率。',
-    metric: '内容聚焦度显著提升',
-    image: '/assets/case-zebra-mycourse.png',
-    link: '',
-    linkLabel: '来自 UIUX 作品集',
-  },
-  {
-    title: '口语课老师端平台',
-    scope: 'SaaS Dashboard · UIUX Job',
-    desc: '搭建外教课程管理工作台，统一列表结构和课程状态表达。',
-    metric: '排课与追踪效率提升',
-    image: '/assets/case-oral-teacher.png',
-    link: '',
-    linkLabel: '来自 UIUX 作品集',
-  },
-  {
-    title: '出行 App 体验优化',
-    scope: 'Consumer App · UIUX Job',
-    desc: '围绕会员体系重构信息模块和操作路径，降低高频任务操作成本。',
-    metric: '关键功能触达率提升',
-    image: '/assets/case-travel-analysis.png',
-    link: '',
-    linkLabel: '来自 UIUX 作品集',
-  },
-];
+const caseItems = showcaseItems;
 
 export default function HomeClient() {
   return (
     <main className={styles.page}>
       <header className={styles.header}>
         <div className={`${styles.container} ${styles.headerInner}`}>
-          <div className={styles.logo}>chance design studio</div>
+          <div className={styles.logo}>Chance Design Studio</div>
           <nav className={styles.nav}>
             <a href="#about">关于</a>
             <a href="#services">服务</a>
@@ -87,90 +51,110 @@ export default function HomeClient() {
       </header>
 
       <section className={`${styles.container} ${styles.hero}`}>
-        <div className={styles.heroText}>
-          <p className={styles.eyebrow}>product design · branding · web</p>
-          <h1 className={styles.title}>把复杂业务变成清晰、可转化的体验</h1>
-          <p className={styles.subtitle}>
-            我们不是只做视觉稿，而是从策略、结构到上线交付完整负责。
-            让产品表达更一致，让用户路径更顺畅，让设计结果能转化为真实业务价值。
-          </p>
-          <div className={styles.heroActions}>
-            <a href="#contact" className={styles.buttonPrimary}>
-              START A PROJECT
-            </a>
-            <a href="#cases" className={styles.buttonGhost}>
-              查看案例
-            </a>
+        <div className={styles.heroLayout}>
+          <div className={styles.heroMain}>
+            <p className={styles.heroStudioName}>Chance Design Studio</p>
+            <p className={styles.eyebrow}>product design · uiux design · branding · web</p>
+            <h1 className={styles.title}>
+              我们善于把
+              <span className={styles.titleGap} />
+              复杂业务变成
+              <br />
+              <span className={styles.titleNoWrap}>清晰，可转化，可增长的体验。</span>
+            </h1>
           </div>
-          <div className={styles.badges}>
-            <span>UI/UX</span>
-            <span>Visual System</span>
-            <span>Branding</span>
-            <span>Web Delivery</span>
+          <div className={styles.heroAside}>
+            <p className={styles.heroAsideText}>
+              “我们不是只做视觉稿，而是从策略、结构到上线交付完整负责。
+              让产品表达更一致，让用户路径更顺畅，让设计结果能转化为真实业务价值。
+              ”
+            </p>
+            <div className={styles.heroActions}>
+              <a href="#contact" className={styles.buttonPrimary}>
+                START A PROJECT
+              </a>
+              <a href="#cases" className={styles.buttonGhost}>
+                查看案例
+              </a>
+            </div>
+            <div className={styles.badges}>
+              <span>UI/UX</span>
+              <span>Visual System</span>
+              <span>Branding</span>
+              <span>Web Delivery</span>
+            </div>
           </div>
-        </div>
-        <div className={styles.heroVisual}>
-          <div className={styles.heroImageMain}>
-            <Image src="/assets/pengi-home-full.png" alt="Pengi hero" width={1280} height={720} />
-          </div>
-          <div className={styles.heroImageSmall}>
-            <Image src="/assets/case-zebra-mycourse.png" alt="Zebra app case" width={1280} height={720} />
-          </div>
-          <div className={styles.heroImageTag}>Real Product Cases</div>
         </div>
       </section>
 
       <section id="about" className={`${styles.container} ${styles.section}`}>
         <div className={styles.sectionHead}>
           <p className={styles.sectionTag}>About</p>
-          <h2 className={styles.sectionTitle}>一个把策略和设计一起交付的团队</h2>
+          <h2 className={styles.sectionTitle}>一个专注产品体验与品牌表达的设计团队</h2>
         </div>
         <div className={styles.aboutGrid}>
           <article className={styles.aboutCard}>
             <p className={styles.aboutLead}>
-              团队分布在北京、深圳与湾区，
-              由产品设计师、品牌设计师与前端开发协作交付。
+              Chance Design Studio 成立于 2019 年，base 北京 / 湾区，
+              由一批长期服务全球产品团队的设计师共同创立。
             </p>
             <p className={styles.aboutText}>
-              Chance Design Studio 面向增长型团队，提供从策略定义、体验架构到视觉系统和前端落地的一体化设计服务。
-              我们关注的不只是界面是否好看，而是信息是否清晰、路径是否顺滑、品牌是否被准确感知。
+              核心成员拥有加州艺术学院（California College of the Arts）、
+              卡内基梅隆大学（Carnegie Mellon University）、
+              皇家艺术学院（Royal College of Art）等设计与研究背景，长期参与复杂数字产品与品牌升级项目，
+              擅长在高要求业务场景下把体验、视觉与商业目标整合成一套可执行方案。
             </p>
             <p className={styles.aboutText}>
-              我们坚持“结构先于装饰”的方法论：先解决认知和流程问题，再通过视觉语言放大价值。
-              每一次设计输出都需要回答三个问题：是否更易理解、是否更易决策、是否更易转化。
+              我们服务中国与海外客户，覆盖医疗健康、教育、金融、AI 与消费互联网等领域。
+              交付范围从产品策略、UI/UX 到品牌系统与商业官网，强调设计质量、落地效率和长期一致性。
+              目前已累计服务 120+ 客户与团队。
             </p>
             <div className={styles.aboutManifesto}>
               <div className={styles.manifestoItem}>
                 <h3>Design with Business Context</h3>
-                <p>所有体验决策都与业务目标绑定，不做孤立美学。</p>
+                <p>以业务目标和真实用户行为为前提，避免脱离场景的视觉表达。</p>
               </div>
               <div className={styles.manifestoItem}>
                 <h3>System over Screens</h3>
-                <p>重视规则、组件与一致性，让产品可持续迭代。</p>
+                <p>重视组件规则和一致性，让产品在迭代中依然保持稳定体验。</p>
               </div>
               <div className={styles.manifestoItem}>
                 <h3>From Concept to Launch</h3>
-                <p>从概念到上线全链路协作，减少沟通损耗与返工。</p>
+                <p>从概念到上线保持连续协作，减少反复沟通和返工成本。</p>
               </div>
             </div>
           </article>
-          <div className={styles.aboutStats}>
-            <div className={styles.statBlock}>
-              <p className={styles.statValue}>3-6 周</p>
-              <p className={styles.statLabel}>常规 Sprint 周期</p>
-            </div>
-            <div className={styles.statBlock}>
-              <p className={styles.statValue}>24h</p>
-              <p className={styles.statLabel}>首次沟通响应</p>
-            </div>
-            <div className={styles.statBlock}>
-              <p className={styles.statValue}>CN + EN</p>
-              <p className={styles.statLabel}>双语项目交付</p>
-            </div>
-            <div className={styles.statBlock}>
-              <p className={styles.statValue}>Strategy + UIUX + Branding</p>
-              <p className={styles.statLabel}>高端 UI/UX 工作室的一体化交付模型</p>
-            </div>
+          <div className={styles.aboutSide}>
+            <article className={styles.aboutNote}>
+              <p className={styles.aboutNoteTitle}>合作流程 Collaboration Flow</p>
+              <ol className={styles.aboutFlowList}>
+                <li className={styles.aboutFlowItem}>
+                  <span className={styles.aboutFlowIndex}>01</span>
+                  <p className={styles.aboutFlowText}>明确业务目标与范围，先把优先级和方向定准。</p>
+                </li>
+                <li className={styles.aboutFlowItem}>
+                  <span className={styles.aboutFlowIndex}>02</span>
+                  <p className={styles.aboutFlowText}>按周推进关键页面与核心流程，保持可视化同步。</p>
+                </li>
+                <li className={styles.aboutFlowItem}>
+                  <span className={styles.aboutFlowIndex}>03</span>
+                  <p className={styles.aboutFlowText}>交付可落地设计稿、组件规范与开发对接说明。</p>
+                </li>
+              </ol>
+            </article>
+            <article className={styles.aboutFocus}>
+              <p className={styles.aboutFocusTitle}>重点行业 Focus Industries</p>
+              <div className={styles.focusTags}>
+                <span>医疗健康 Healthcare</span>
+                <span>教育 Education</span>
+                <span>金融 Finance</span>
+                <span>AI 产品 AI Product</span>
+                <span>企业服务 SaaS</span>
+                <span>消费互联网 Consumer Tech</span>
+                <span>出海品牌 Global Growth</span>
+                <span>跨境电商 E-commerce</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -204,7 +188,7 @@ export default function HomeClient() {
         </div>
         <div className={styles.caseGrid}>
           {caseItems.map((item) => (
-            <article key={item.title} className={`${styles.caseCard} ${item.featured ? styles.caseFeatured : ''}`}>
+            <article key={item.slug} className={styles.caseCard}>
               <div className={styles.caseImageWrap}>
                 <Image src={item.image} alt={item.title} width={1280} height={720} className={styles.caseImage} />
               </div>
@@ -213,13 +197,11 @@ export default function HomeClient() {
                 <h3 className={styles.caseTitle}>{item.title}</h3>
                 <p className={styles.caseDesc}>{item.desc}</p>
                 <p className={styles.caseMetric}>{item.metric}</p>
-                {item.link ? (
-                  <a href={item.link} target="_blank" rel="noreferrer" className={styles.caseLink}>
-                    {item.linkLabel}
-                  </a>
-                ) : (
-                  <span className={styles.caseFrom}>{item.linkLabel}</span>
-                )}
+                <div className={styles.caseActions}>
+                  <Link href={`/showcase/${item.slug}`} className={styles.caseViewBtn}>
+                    查看
+                  </Link>
+                </div>
               </div>
             </article>
           ))}

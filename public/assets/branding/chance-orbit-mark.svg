@@ -1,0 +1,11 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" rx="48" fill="#F3F6FB"/>
+  <ellipse cx="600" cy="398" rx="262" ry="174" stroke="#1A325A" stroke-width="14"/>
+  <ellipse cx="600" cy="398" rx="174" ry="262" stroke="#1A325A" stroke-width="14"/>
+  <circle cx="600" cy="398" r="86" fill="#0F2342"/>
+  <circle cx="600" cy="398" r="49" fill="#FFFFFF"/>
+  <circle cx="862" cy="398" r="28" fill="#FF6B00"/>
+  <circle cx="338" cy="398" r="20" fill="#87A2D8"/>
+  <path d="M600 175L627 225H573L600 175Z" fill="#FF6B00"/>
+  <text x="102" y="716" fill="#1C3155" font-family="Arial, Helvetica, sans-serif" font-size="42" letter-spacing="6">CHANCE / BRAND ORBIT</text>
+</svg>

@@ -1,0 +1,145 @@
+.page {
+  min-height: 100vh;
+  background: #f3f4f1;
+  color: #17233a;
+  padding-bottom: 44px;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 44px 0 24px;
+}
+
+.back {
+  color: #5a6776;
+  text-decoration: none;
+  font-size: 0.92rem;
+}
+
+.scope {
+  margin: 16px 0 8px;
+  color: #5a6776;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+  line-height: 1.14;
+}
+
+.desc {
+  margin: 14px 0 0;
+  max-width: 70ch;
+  color: #4d5e72;
+  line-height: 1.7;
+}
+
+.metric {
+  margin: 12px 0 0;
+  color: #142640;
+  font-weight: 700;
+}
+
+.actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.ghostBtn {
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.primaryBtn {
+  color: #fff;
+  background: linear-gradient(135deg, #0b5f59, #0f766e);
+}
+
+.ghostBtn {
+  color: #142640;
+  background: #fff;
+  border: 1px solid #d3dbe6;
+}
+
+.coverWrap {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid #d3dbe6;
+  background: #d7e2eb;
+  box-shadow: 0 18px 38px rgba(16, 24, 40, 0.12);
+}
+
+.cover {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.content {
+  padding-top: 18px;
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid #d3dbe6;
+  background: #fff;
+  padding: 18px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.card p {
+  margin: 9px 0 0;
+  color: #4d5e72;
+  line-height: 1.66;
+}
+
+.pdfSection {
+  padding-top: 18px;
+}
+
+.pdfHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pdfHead h2 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.pdfFrame {
+  width: 100%;
+  min-height: 78vh;
+  border-radius: 14px;
+  border: 1px solid #d3dbe6;
+  background: #fff;
+}
+
+@media (max-width: 960px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
