@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import HomeClient from './HomeClient';
-import type { Locale } from '@/lib/studio-content';
 
 export const metadata: Metadata = {
   title: 'chance design studio | UI/UX, Brand & Web',
@@ -30,17 +29,6 @@ export const metadata: Metadata = {
   },
 };
 
-type HomePageProps = {
-  searchParams: Promise<{ lang?: string }>;
-};
-
-function normalizeLocale(raw?: string): Locale {
-  return raw === 'en' ? 'en' : 'zh';
-}
-
-export default async function Home({ searchParams }: HomePageProps) {
-  const query = await searchParams;
-  const initialLocale = normalizeLocale(query.lang);
-
-  return <HomeClient initialLocale={initialLocale} />;
+export default function Home() {
+  return <HomeClient />;
 }
