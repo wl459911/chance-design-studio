@@ -159,7 +159,7 @@ export default function HomeClient({ initialLocale = 'zh' }: { initialLocale?: L
             <p className={styles.dual}>{data.contact.hint}</p>
           </div>
           <Image
-            src="/assets/chance-wechat-qr.svg"
+            src="/assets/chance-wechat-qr.png"
             alt="Chance Design Studio WeChat QR"
             width={190}
             height={190}

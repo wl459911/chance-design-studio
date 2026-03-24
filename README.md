@@ -37,6 +37,6 @@ npm run build
 
 把你的真实二维码覆盖这个文件即可：
 
-`public/assets/chance-wechat-qr.svg`
+`public/assets/chance-wechat-qr.png`
 
 如果你给我 png/jpg，我也可以直接帮你改成图片版。
