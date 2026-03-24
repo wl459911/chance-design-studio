@@ -197,7 +197,10 @@ export default function HomeClient() {
         <div className={styles.sectionHead}>
           <p className={styles.sectionTag}>Case Studies</p>
           <h2 className={styles.sectionTitle}>精选案例</h2>
-          <p className={styles.caseHint}>当前展示 1 个 Pengi 案例 + 3 个 UIUX Job 案例。</p>
+          <p className={styles.caseHint}>
+            我们以真实业务目标为起点，聚焦教育科技、平台工具与消费产品的体验升级。
+            以下案例展示从策略梳理到界面落地的完整设计能力。
+          </p>
         </div>
         <div className={styles.caseGrid}>
           {caseItems.map((item) => (
