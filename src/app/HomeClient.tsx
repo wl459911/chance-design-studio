@@ -1,230 +1,193 @@
 'use client';
 
 import Image from 'next/image';
-import homeStyles from './home.module.css';
-import { studioContent } from '@/lib/studio-content';
+import styles from './home.module.css';
 
-const selectedCases = studioContent.zh.cases.slice(0, 4);
+const coreServices = [
+  {
+    title: '产品策略与信息架构',
+    desc: '从业务目标和用户心智出发，梳理产品结构、关键路径和优先级。',
+  },
+  {
+    title: 'UI/UX 体验设计',
+    desc: '以可用性和转化为中心，交付高保真界面、交互原型与设计规范。',
+  },
+  {
+    title: '视觉系统与品牌表达',
+    desc: '统一品牌识别、视觉语言和内容表达，建立可延展的品牌资产。',
+  },
+  {
+    title: 'Branding 与官网设计',
+    desc: '构建品牌官网叙事，兼顾视觉气质、信息清晰与商业转化。',
+  },
+  {
+    title: '前端落地与交付支持',
+    desc: '把设计变成可上线页面，支持开发走查、发布和上线后迭代。',
+  },
+];
 
-const caseCoverPositions = [
-  'center 14%',
-  '80% 20%',
-  '16% 72%',
-  '82% 74%',
+const caseStudies = [
+  {
+    title: 'Pengi Landing Experience',
+    scope: 'Product Marketing · UX Writing',
+    detail:
+      '重构首页价值叙事与转化路径，用清晰的信息层级承接产品能力与用户预期。',
+    metric: '首屏信息识别效率提升',
+    image: '/assets/pengi-home-full.png',
+    link: 'https://pengi.ai',
+  },
+  {
+    title: 'Pengi Roadmaps',
+    scope: 'Information Architecture · Edu Product',
+    detail:
+      '将年级、教材、路径映射成可浏览可跳转的结构，降低学生与家长的选择成本。',
+    metric: '路径查找成本显著下降',
+    image: '/assets/pengi-roadmaps.png',
+    link: 'https://pengi.ai/roadmaps',
+  },
+  {
+    title: 'Pengi Textbooks Hub',
+    scope: 'Search Experience · Data Display',
+    detail:
+      '围绕教材检索与筛选场景设计内容组织，让复杂数据集具备快速可读性。',
+    metric: '筛选与定位效率提升',
+    image: '/assets/pengi-textbooks.png',
+    link: 'https://pengi.ai/textbooks',
+  },
+  {
+    title: 'Pengi Content System',
+    scope: 'Brand Content · Editorial UX',
+    detail:
+      '统一 blog 信息风格与内容结构，保证教育内容既专业又易于理解。',
+    metric: '内容可读性与连贯性增强',
+    image: '/assets/pengi-blog.png',
+    link: 'https://pengi.ai/blog',
+  },
 ];
 
 export default function HomeClient() {
   return (
-    <main className={homeStyles.page}>
-      <header className={homeStyles.header}>
-        <div className={`${homeStyles.container} ${homeStyles.headerInner}`}>
-          <div className={homeStyles.logo}>chance design studio</div>
-          <nav className={homeStyles.nav}>
-            <a href="#about">关于我们</a>
-            <a href="#services">服务核心</a>
-            <a href="#cases">精选案例</a>
-            <a href="#pricing">咨询定价</a>
-            <a href="#contact">联系我们</a>
+    <main className={styles.page}>
+      <header className={styles.header}>
+        <div className={`${styles.container} ${styles.headerInner}`}>
+          <div className={styles.logo}>chance design studio</div>
+          <nav className={styles.nav}>
+            <a href="#about">关于</a>
+            <a href="#services">服务</a>
+            <a href="#cases">案例</a>
+            <a href="#contact">联系</a>
           </nav>
         </div>
       </header>
 
-      <section className={`${homeStyles.container} ${homeStyles.hero}`}>
-        <div>
-          <p className={homeStyles.eyebrow}>chance design studio 产品设计工作室</p>
-          <h1 className={homeStyles.title}>专注清晰、可用的产品设计工作室</h1>
-          <p className={homeStyles.subtitle}>
-            我们通过信息结构梳理、流程路径优化和关键决策表达，把复杂业务还原成可理解、可执行、可增长的产品体验。
-          </p>
-          <div className={homeStyles.heroActions}>
-            <a href="#contact" className={homeStyles.buttonPrimary}>
-              START A PROJECT
-            </a>
-            <a href="#cases" className={homeStyles.buttonGhost}>
-              查看案例
-            </a>
-          </div>
-        </div>
-        <div className={homeStyles.heroVisual}>
-          <Image
-            src="/assets/profile-cases-reference.png"
-            alt="Chance Design Studio selected cases"
-            width={1280}
-            height={1200}
-            priority
-          />
+      <section className={`${styles.container} ${styles.hero}`}>
+        <p className={styles.eyebrow}>product design · branding · web</p>
+        <h1 className={styles.title}>用清晰设计解决复杂业务问题</h1>
+        <p className={styles.subtitle}>
+          Chance Design Studio 专注于产品体验设计、视觉系统与商业官网落地。
+          我们把策略、设计与交付串成同一条线，让每次设计决策都有业务价值。
+        </p>
+        <div className={styles.heroActions}>
+          <a href="#contact" className={styles.buttonPrimary}>
+            START A PROJECT
+          </a>
+          <a href="#cases" className={styles.buttonSecondary}>
+            查看案例
+          </a>
         </div>
       </section>
 
-      <section id="about" className={`${homeStyles.container} ${homeStyles.section}`}>
-        <div className={homeStyles.sectionHead}>
-          <p className={homeStyles.sectionTag}>About The Archive</p>
-          <h2 className={homeStyles.sectionTitle}>关于我们</h2>
+      <section id="about" className={`${styles.container} ${styles.section}`}>
+        <div className={styles.sectionHead}>
+          <p className={styles.sectionTag}>About</p>
+          <h2 className={styles.sectionTitle}>关于我们</h2>
         </div>
-        <div className={homeStyles.aboutWrap}>
-          <article className={homeStyles.aboutCard}>
-            <p className={homeStyles.aboutLead}>
-              我们的团队分布在北京、深圳与湾区，
-              汇聚了具备全球视野的资深设计师与系统架构师。
+        <div className={styles.aboutGrid}>
+          <article className={styles.aboutCard}>
+            <p className={styles.aboutLead}>
+              团队分布在北京、深圳与湾区，
+              由产品设计师、品牌设计师与前端开发协作交付。
             </p>
-            <p className={homeStyles.aboutText}>
-              Chance 的核心哲学源于对复杂性的深度解构。我们相信，卓越设计不在于装饰，而在于将复杂的信息架构转化为直觉般的交互流向。
+            <p className={styles.aboutText}>
+              我们坚持“结构先于装饰”的方法论：先把信息和流程讲清，再做视觉表达与品牌放大。
+              适合正在增长阶段、需要“设计 + 落地”一体化支持的团队。
             </p>
-            <div className={homeStyles.miniGrid}>
-              <div className={homeStyles.miniCard}>
-                每一个决策都有据可依，每一处细节都服务于最终的可用性。
-              </div>
-              <div className={homeStyles.miniCard}>
-                我们跨越地域协作，为全球客户提供稳定且有深度的设计交付。
-              </div>
+          </article>
+          <article className={styles.statsCard}>
+            <div>
+              <p className={styles.statValue}>3-6 周</p>
+              <p className={styles.statLabel}>常规 UI/UX Sprint 周期</p>
+            </div>
+            <div>
+              <p className={styles.statValue}>24h</p>
+              <p className={styles.statLabel}>首次需求回复时间</p>
+            </div>
+            <div>
+              <p className={styles.statValue}>CN + EN</p>
+              <p className={styles.statLabel}>双语设计与官网交付</p>
             </div>
           </article>
-          <div className={homeStyles.aboutImage}>
-            <Image
-              src="/assets/profile-about-reference.png"
-              alt="Chance team profile reference"
-              width={1280}
-              height={1200}
-            />
-          </div>
         </div>
       </section>
 
-      <section id="services" className={`${homeStyles.container} ${homeStyles.section}`}>
-        <div className={homeStyles.sectionHead}>
-          <p className={homeStyles.sectionTag}>Core Expertise</p>
-          <h2 className={homeStyles.sectionTitle}>服务核心</h2>
+      <section id="services" className={`${styles.container} ${styles.section}`}>
+        <div className={styles.sectionHead}>
+          <p className={styles.sectionTag}>Core Services</p>
+          <h2 className={styles.sectionTitle}>服务核心</h2>
         </div>
-        <div className={homeStyles.cards3}>
-          <article className={homeStyles.coreCard}>
-            <h3 className={homeStyles.coreTitle}>信息结构梳理</h3>
-            <p className={homeStyles.coreBody}>
-              对杂乱无章的业务逻辑进行深度还原，重塑清晰的底层信息层级。
-            </p>
-          </article>
-          <article className={homeStyles.coreCard}>
-            <h3 className={homeStyles.coreTitle}>流程路径优化</h3>
-            <p className={homeStyles.coreBody}>
-              通过对用户心智模型的调研，消除操作摩擦，让体验更顺滑。
-            </p>
-          </article>
-          <article className={homeStyles.coreCard}>
-            <h3 className={homeStyles.coreTitle}>关键决策表达</h3>
-            <p className={homeStyles.coreBody}>
-              让设计辅助决策，用精准可视化语言降低团队认知分歧。
-            </p>
-          </article>
+        <div className={styles.serviceGrid}>
+          {coreServices.map((item) => (
+            <article key={item.title} className={styles.serviceCard}>
+              <h3 className={styles.serviceTitle}>{item.title}</h3>
+              <p className={styles.serviceDesc}>{item.desc}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className={`${homeStyles.container} ${homeStyles.section}`}>
-        <div className={homeStyles.sectionHead}>
-          <h2 className={homeStyles.sectionTitle}>业务领域</h2>
+      <section id="cases" className={`${styles.container} ${styles.section}`}>
+        <div className={styles.sectionHead}>
+          <p className={styles.sectionTag}>Case Studies</p>
+          <h2 className={styles.sectionTitle}>精选案例</h2>
+          <p className={styles.sectionHint}>以下案例视觉取自 Pengi.ai 产品页面（由你们团队设计）。</p>
         </div>
-        <div className={homeStyles.cards3}>
-          <article className={homeStyles.industryCard}>
-            <p className={homeStyles.industryEn}>Education</p>
-            <h3 className={homeStyles.industryZh}>教育</h3>
-          </article>
-          <article className={homeStyles.industryCard}>
-            <p className={homeStyles.industryEn}>Healthcare</p>
-            <h3 className={homeStyles.industryZh}>医疗</h3>
-          </article>
-          <article className={homeStyles.industryCard}>
-            <p className={homeStyles.industryEn}>Complex Systems</p>
-            <h3 className={homeStyles.industryZh}>复杂产品系统</h3>
-          </article>
-        </div>
-      </section>
-
-      <section id="cases" className={`${homeStyles.container} ${homeStyles.section}`}>
-        <div className={homeStyles.sectionHead}>
-          <p className={homeStyles.sectionTag}>Selected Case Studies From The Archive</p>
-          <h2 className={homeStyles.sectionTitle}>精选案例</h2>
-        </div>
-        <div className={homeStyles.caseGrid}>
-          {selectedCases.map((item, idx) => (
-            <article className={homeStyles.caseCard} key={item.slug}>
-              <div className={homeStyles.caseImage}>
-                <Image
-                  src="/assets/profile-cases-reference.png"
-                  alt={item.title}
-                  width={1280}
-                  height={1200}
-                  style={{ objectPosition: caseCoverPositions[idx] }}
-                />
+        <div className={styles.caseGrid}>
+          {caseStudies.map((item) => (
+            <article key={item.title} className={styles.caseCard}>
+              <div className={styles.caseImageWrap}>
+                <Image src={item.image} alt={item.title} width={1280} height={720} className={styles.caseImage} />
               </div>
-              <div className={homeStyles.caseBody}>
-                <p className={homeStyles.caseMeta}>{item.scope}</p>
-                <h3 className={homeStyles.caseTitle}>{item.title}</h3>
-                <p className={homeStyles.caseDetail}>{item.detail}</p>
-                <span className={homeStyles.caseMetric}>{item.metric}</span>
+              <div className={styles.caseBody}>
+                <p className={styles.caseScope}>{item.scope}</p>
+                <h3 className={styles.caseTitle}>{item.title}</h3>
+                <p className={styles.caseDetail}>{item.detail}</p>
+                <p className={styles.caseMetric}>{item.metric}</p>
+                <a href={item.link} target="_blank" rel="noreferrer" className={styles.caseLink}>
+                  查看原站页面
+                </a>
               </div>
             </article>
           ))}
         </div>
       </section>
 
-      <section id="pricing" className={`${homeStyles.container} ${homeStyles.section}`}>
-        <div className={homeStyles.pricing}>
-          <h2 className={homeStyles.pricingTitle}>设计咨询定价</h2>
-          <p className={homeStyles.pricingSub}>透明的定价体系，为不同阶段的产品提供精准设计赋能。</p>
-          <div className={homeStyles.pricingGrid}>
-            <article className={homeStyles.priceCardDark}>
-              <h3 className={homeStyles.priceLabel}>Core Consulting</h3>
-              <p className={homeStyles.priceValue}>¥6,000 起</p>
-              <ul className={homeStyles.priceList}>
-                <li>信息架构梳理</li>
-                <li>核心交互路径优化</li>
-                <li>关键页面低保真原型</li>
-              </ul>
-            </article>
-            <article className={homeStyles.priceCardLight}>
-              <h3 className={homeStyles.priceLabel}>Full Product Design</h3>
-              <p className={homeStyles.priceValue}>¥12k - 20k</p>
-              <ul className={homeStyles.priceList}>
-                <li>完整可执行设计规范</li>
-                <li>高保真交互原型交付</li>
-                <li>交付支持与走查</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className={`${homeStyles.container} ${homeStyles.section}`}>
-        <div className={homeStyles.contact}>
-          <article className={homeStyles.contactMain}>
-            <p className={homeStyles.sectionTag}>Email Inquiry</p>
-            <p className={homeStyles.contactEmail}>wl459911@gmail.com</p>
-            <p className={homeStyles.contactNote}>准备好让您的产品重塑逻辑了吗？欢迎直接发邮件或加微信。</p>
-            <div className={homeStyles.qrWrap}>
-              <Image
-                src="/assets/chance-wechat-qr.png"
-                alt="Chance Design Studio WeChat QR"
-                width={264}
-                height={264}
-              />
-              <p className={homeStyles.contactNote}>WeChat / 18522385534</p>
-            </div>
+      <section id="contact" className={`${styles.container} ${styles.section}`}>
+        <div className={styles.contactWrap}>
+          <article className={styles.contactCard}>
+            <p className={styles.sectionTag}>Contact</p>
+            <h2 className={styles.sectionTitle}>联系我们</h2>
+            <p className={styles.contactMail}>wl459911@gmail.com</p>
+            <p className={styles.contactText}>合作咨询可直接微信，或发邮件描述项目目标、时间线与预期范围。</p>
           </article>
-          <article className={homeStyles.contactAside}>
-            <p className={homeStyles.sectionTag}>Office Locations</p>
-            <p className={homeStyles.contactEmail}>Beijing<br />Shenzhen<br />Bay Area</p>
-            <div className={homeStyles.heroVisual}>
-              <Image
-                src="/assets/profile-contact-reference.png"
-                alt="Contact style reference from studio profile"
-                width={1280}
-                height={1200}
-              />
-            </div>
+          <article className={styles.qrCard}>
+            <Image src="/assets/chance-wechat-qr.png" alt="WeChat QR" width={240} height={240} className={styles.qr} />
+            <p className={styles.qrText}>WeChat / 18522385534</p>
           </article>
         </div>
       </section>
 
-      <footer className={homeStyles.footer}>
-        <div className={homeStyles.container}>CHANCE DESIGN STUDIO © 2026 · Crafted with precision for global products.</div>
+      <footer className={styles.footer}>
+        <div className={styles.container}>CHANCE DESIGN STUDIO © 2026</div>
       </footer>
     </main>
   );
