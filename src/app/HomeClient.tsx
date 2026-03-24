@@ -128,25 +128,48 @@ export default function HomeClient() {
         <div className={styles.aboutGrid}>
           <article className={styles.aboutCard}>
             <p className={styles.aboutLead}>
-              团队分布在北京、深圳与湾区，覆盖产品、品牌、视觉与前端。
+              团队分布在北京、深圳与湾区，
+              由产品设计师、品牌设计师与前端开发协作交付。
             </p>
             <p className={styles.aboutText}>
-              我们坚持“结构优先，视觉增强”的工作方法：先解决信息和流程问题，再建立可扩展的视觉系统。
-              对增长团队来说，这意味着更快落地、更少返工、更稳定的体验质量。
+              Chance Design Studio 面向增长型团队，提供从策略定义、体验架构到视觉系统和前端落地的一体化设计服务。
+              我们关注的不只是界面是否好看，而是信息是否清晰、路径是否顺滑、品牌是否被准确感知。
             </p>
+            <p className={styles.aboutText}>
+              我们坚持“结构先于装饰”的方法论：先解决认知和流程问题，再通过视觉语言放大价值。
+              每一次设计输出都需要回答三个问题：是否更易理解、是否更易决策、是否更易转化。
+            </p>
+            <div className={styles.aboutManifesto}>
+              <div className={styles.manifestoItem}>
+                <h3>Design with Business Context</h3>
+                <p>所有体验决策都与业务目标绑定，不做孤立美学。</p>
+              </div>
+              <div className={styles.manifestoItem}>
+                <h3>System over Screens</h3>
+                <p>重视规则、组件与一致性，让产品可持续迭代。</p>
+              </div>
+              <div className={styles.manifestoItem}>
+                <h3>From Concept to Launch</h3>
+                <p>从概念到上线全链路协作，减少沟通损耗与返工。</p>
+              </div>
+            </div>
           </article>
           <div className={styles.aboutStats}>
-            <div>
+            <div className={styles.statBlock}>
               <p className={styles.statValue}>3-6 周</p>
               <p className={styles.statLabel}>常规 Sprint 周期</p>
             </div>
-            <div>
+            <div className={styles.statBlock}>
               <p className={styles.statValue}>24h</p>
               <p className={styles.statLabel}>首次沟通响应</p>
             </div>
-            <div>
+            <div className={styles.statBlock}>
               <p className={styles.statValue}>CN + EN</p>
               <p className={styles.statLabel}>双语项目交付</p>
+            </div>
+            <div className={styles.statBlock}>
+              <p className={styles.statValue}>Strategy + UIUX + Branding</p>
+              <p className={styles.statLabel}>高端 UI/UX 工作室的一体化交付模型</p>
             </div>
           </div>
         </div>

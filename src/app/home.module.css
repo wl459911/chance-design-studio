@@ -251,9 +251,37 @@
 }
 
 .aboutText {
-  margin: 0;
+  margin: 0 0 10px;
   color: var(--muted);
   line-height: 1.72;
+}
+
+.aboutManifesto {
+  margin-top: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.manifestoItem {
+  border: 1px solid #e3e9f2;
+  background: #f8fbff;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.manifestoItem h3 {
+  margin: 0;
+  font-size: 0.86rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #24354f;
+}
+
+.manifestoItem p {
+  margin: 6px 0 0;
+  color: #5a6a82;
+  line-height: 1.55;
+  font-size: 0.9rem;
 }
 
 .aboutStats {
@@ -261,6 +289,16 @@
   display: grid;
   gap: 18px;
   align-content: center;
+}
+
+.statBlock {
+  padding-bottom: 14px;
+  border-bottom: 1px dashed #dbe3ee;
+}
+
+.statBlock:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
 }
 
 .statValue {
