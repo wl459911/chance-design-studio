@@ -1,0 +1,42 @@
+<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Chance Design Studio WeChat QR placeholder">
+  <rect width="640" height="640" fill="#ffffff"/>
+  <rect x="34" y="34" width="572" height="572" rx="18" fill="#ffffff" stroke="#0f172a" stroke-width="10"/>
+  <g fill="#0f172a">
+    <rect x="70" y="70" width="160" height="160"/>
+    <rect x="95" y="95" width="110" height="110" fill="#ffffff"/>
+    <rect x="118" y="118" width="64" height="64"/>
+    <rect x="410" y="70" width="160" height="160"/>
+    <rect x="435" y="95" width="110" height="110" fill="#ffffff"/>
+    <rect x="458" y="118" width="64" height="64"/>
+    <rect x="70" y="410" width="160" height="160"/>
+    <rect x="95" y="435" width="110" height="110" fill="#ffffff"/>
+    <rect x="118" y="458" width="64" height="64"/>
+    <rect x="270" y="274" width="40" height="40"/>
+    <rect x="318" y="274" width="40" height="40"/>
+    <rect x="366" y="274" width="40" height="40"/>
+    <rect x="414" y="274" width="40" height="40"/>
+    <rect x="510" y="274" width="40" height="40"/>
+    <rect x="270" y="322" width="40" height="40"/>
+    <rect x="366" y="322" width="40" height="40"/>
+    <rect x="462" y="322" width="40" height="40"/>
+    <rect x="510" y="322" width="40" height="40"/>
+    <rect x="270" y="370" width="40" height="40"/>
+    <rect x="318" y="370" width="40" height="40"/>
+    <rect x="414" y="370" width="40" height="40"/>
+    <rect x="510" y="370" width="40" height="40"/>
+    <rect x="270" y="418" width="40" height="40"/>
+    <rect x="366" y="418" width="40" height="40"/>
+    <rect x="414" y="418" width="40" height="40"/>
+    <rect x="462" y="418" width="40" height="40"/>
+    <rect x="270" y="466" width="40" height="40"/>
+    <rect x="318" y="466" width="40" height="40"/>
+    <rect x="462" y="466" width="40" height="40"/>
+    <rect x="510" y="466" width="40" height="40"/>
+    <rect x="318" y="514" width="40" height="40"/>
+    <rect x="366" y="514" width="40" height="40"/>
+    <rect x="414" y="514" width="40" height="40"/>
+    <rect x="510" y="514" width="40" height="40"/>
+  </g>
+  <rect x="130" y="560" width="380" height="54" rx="27" fill="#0f766e"/>
+  <text x="320" y="594" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" fill="#ffffff" letter-spacing="1">CHANCE DESIGN STUDIO</text>
+</svg>
