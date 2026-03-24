@@ -14,6 +14,7 @@ const notoSansSC = Noto_Sans_SC({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://chance-design-studio.vercel.app'),
   title: {
     default: 'chance design studio',
     template: '%s | chance design studio',
