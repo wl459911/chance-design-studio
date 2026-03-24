@@ -274,6 +274,13 @@
   border-bottom: 1px solid #334155;
 }
 
+.caseFootnote {
+  margin-top: 12px;
+  display: inline-flex;
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
 .contactWrap {
   display: grid;
   gap: 16px;

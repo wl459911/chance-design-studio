@@ -35,33 +35,37 @@ const caseStudies = [
     metric: '首屏信息识别效率提升',
     image: '/assets/pengi-home-full.png',
     link: 'https://pengi.ai',
+    linkLabel: '查看原站页面',
   },
   {
-    title: 'Pengi Roadmaps',
-    scope: 'Information Architecture · Edu Product',
+    title: '斑马 AI 课 App 改版',
+    scope: 'Mobile App · UI/UX Redesign',
     detail:
-      '将年级、教材、路径映射成可浏览可跳转的结构，降低学生与家长的选择成本。',
-    metric: '路径查找成本显著下降',
-    image: '/assets/pengi-roadmaps.png',
-    link: 'https://pengi.ai/roadmaps',
+      '重构课程首页与学习路径表达，优化信息层级和内容卡片，提高用户浏览与选择效率。',
+    metric: '学习路径可读性与内容聚焦度提升',
+    image: '/assets/case-zebra-mycourse.png',
+    link: '',
+    linkLabel: '来自 UIUX 作品集',
   },
   {
-    title: 'Pengi Textbooks Hub',
-    scope: 'Search Experience · Data Display',
+    title: '口语课老师端平台',
+    scope: 'SaaS Platform · Dashboard UX',
     detail:
-      '围绕教材检索与筛选场景设计内容组织，让复杂数据集具备快速可读性。',
-    metric: '筛选与定位效率提升',
-    image: '/assets/pengi-textbooks.png',
-    link: 'https://pengi.ai/textbooks',
+      '为外教课堂管理场景搭建课程展示与评价工作台，统一列表结构，降低管理成本。',
+    metric: '教师排课与课程追踪效率提升',
+    image: '/assets/case-oral-teacher.png',
+    link: '',
+    linkLabel: '来自 UIUX 作品集',
   },
   {
-    title: 'Pengi Content System',
-    scope: 'Brand Content · Editorial UX',
+    title: '出行 App 体验优化',
+    scope: 'Consumer App · Interaction Upgrade',
     detail:
-      '统一 blog 信息风格与内容结构，保证教育内容既专业又易于理解。',
-    metric: '内容可读性与连贯性增强',
-    image: '/assets/pengi-blog.png',
-    link: 'https://pengi.ai/blog',
+      '围绕会员体系与核心操作路径进行页面重构，强化功能分层与高频操作效率。',
+    metric: '关键功能触达效率与页面理解度提升',
+    image: '/assets/case-travel-analysis.png',
+    link: '',
+    linkLabel: '来自 UIUX 作品集',
   },
 ];
 
@@ -149,7 +153,7 @@ export default function HomeClient() {
         <div className={styles.sectionHead}>
           <p className={styles.sectionTag}>Case Studies</p>
           <h2 className={styles.sectionTitle}>精选案例</h2>
-          <p className={styles.sectionHint}>以下案例视觉取自 Pengi.ai 产品页面（由你们团队设计）。</p>
+          <p className={styles.sectionHint}>案例包含 1 个 Pengi 项目与 3 个 UIUX 作品集项目。</p>
         </div>
         <div className={styles.caseGrid}>
           {caseStudies.map((item) => (
@@ -162,9 +166,13 @@ export default function HomeClient() {
                 <h3 className={styles.caseTitle}>{item.title}</h3>
                 <p className={styles.caseDetail}>{item.detail}</p>
                 <p className={styles.caseMetric}>{item.metric}</p>
-                <a href={item.link} target="_blank" rel="noreferrer" className={styles.caseLink}>
-                  查看原站页面
-                </a>
+                {item.link ? (
+                  <a href={item.link} target="_blank" rel="noreferrer" className={styles.caseLink}>
+                    {item.linkLabel}
+                  </a>
+                ) : (
+                  <span className={styles.caseFootnote}>{item.linkLabel}</span>
+                )}
               </div>
             </article>
           ))}
